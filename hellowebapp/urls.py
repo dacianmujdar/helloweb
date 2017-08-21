@@ -20,11 +20,11 @@ urlpatterns = [
     url(r'^articles/(?P<slug>[-\w]+)/edit/$',
         views.edit_article, name='edit_article'),
 
-    # url(r'^browse/$', RedirectView.as_view(pattern_name='browse')),
-    # url(r'^browse/name/$',
-    #     views.browse_by_name, name='browse'),
-    # url(r'^browse/name/(?P<initial>[-\w]+)/$',
-    #     views.browse_by_name, name='browse_by_name'),
+    url(r'^browse/$', RedirectView.as_view(pattern_name='browse')),
+    url(r'^browse/name/$',
+        views.browse_by_name, name='browse'),
+    url(r'^browse/name/(?P<initial>[-\w]+)/$',
+        views.browse_by_name, name='browse_by_name'),
 
     # password reset urls
     url(r'^accounts/password/reset/$', password_reset, 
