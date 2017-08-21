@@ -6,5 +6,6 @@
 {% block content %}
     <h2> {{ article.name }} </h2>
     <p> {{ article.description }} </p>
+    <a href="{% url 'edit_article' slug=article.slug %}">Edit me!</a>
 {% endblock content %}
 
