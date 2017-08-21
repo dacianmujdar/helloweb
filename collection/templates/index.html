@@ -5,10 +5,9 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Hello World!</h1>
-    <p>I am a basic website.</p>
-    <p> {% if number %} Number exists! {{ number }} {% endif %} </p>
-    <p> There are {{ number | apnumber }} dogs </p>
-    <p> This is my name: {{ thing | slugify }} </p>
+    {% for article in articles %}
+        <h2> {{ article.name }} </h2>
+        <p> {{ article.description }} </p>
+    {% endfor %}
 {% endblock content %}
 
