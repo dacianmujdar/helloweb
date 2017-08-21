@@ -6,6 +6,10 @@
 {% block content %}
     <h2> {{ article.name }} </h2>
     <p> {{ article.description }} </p>
-    <a href="{% url 'edit_article' slug=article.slug %}">Edit me!</a>
+    {% if user == article.owner %}
+        <p>
+            <a href="{% url 'edit_article' slug=article.slug %}">Edit me!</a>
+        </p>
+    {% endif %}
 {% endblock content %}
 
